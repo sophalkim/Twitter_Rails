@@ -18,16 +18,51 @@
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1>Welcome to Sample app</h1>
+    <h1>Welcome to Sophal Kim's Twitter App</h1>
     <h2>
-      This is the home page for the
-      <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
+      Click here to 
+      <%= link_to "Login", login_path %>
+      or click below to sign up.
     </h2>
     
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-success" %>
   </div>
   
-  <%= link_to image_tag("rails.png", alt: "Rails logo"), 
+  <hr>
+  <br/>
+  <div class="panel panel-info">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Login Information</h3>
+		</div>
+		<div class="panel-body">
+		  The email-activation feature may take up to 15 minutes to reach you.
+		  Please use the following username and password to explore the website 
+		  in the mean time.
+		  <ul class="list-group">
+					<li class="list-group-item" id="lgi1">
+					  <p>
+					    Administrator
+					  </p>
+					  <p>
+					    username: example@railstutorial.org
+					    <br>
+					    password: foobar
+					  </p>
+					</li>
+					<li class="list-group-item" id="lgi2">
+					  <p>
+					    Regular User
+					  </p>
+					  <p>
+					    username: example-1@railstutorial.org
+					    <br>
+					    password: password
+					  </p>
+					</li>
+				</ul>
+		</div>
+	</div>
+	
+	<%= link_to image_tag("rails.png", alt: "Rails logo"), 
     'http://rubyonrails.org/' %>
 <% end %>
